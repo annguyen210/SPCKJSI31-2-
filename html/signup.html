@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Đăng Ký</title>
+  </head>
+  <body>
+    <div class="signupForm">
+      <h2>Đăng Ký</h2>
+      <form id="signupForm">
+        <input id="signupEmail" type="email" placeholder="Email" required />
+        <input
+          id="signupPassword"
+          type="password"
+          placeholder="Password"
+          required
+        />
+        <input
+          id="confirmPassword"
+          type="password"
+          placeholder="Confirm Password"
+          required
+        />
+        <p>
+          Bạn đã có tài khoản? 👉
+          <a href="login.html" id="showLogin">Đăng nhập</a>
+        </p>
+        <button type="submit">Đăng Ký</button>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script type="module" src="../js/login_signup/dangnhap.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333; /* Màu nền tối */
+}
+
+.loginForm, .signupForm {
+    background-color: rgba(0, 0, 0, 0.7); /* Nền trong suốt */
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: white; /* Màu chữ */
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Màu nút */
+    color: white;
+    cursor: pointer;
+}
+ 
+.checkbox {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.checkbox label {
+    margin-left: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    float: right; /* Đưa link vào bên phải */
+}
+
+ p{
+    color: white;
+ }

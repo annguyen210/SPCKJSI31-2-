@@ -1,0 +1,52 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+header {  
+    background: #333;  
+    color: #fff;  
+    padding: 15px;  
+    text-align: center;  
+}  
+
+h1 {  
+    margin: 0;  
+}  
+
+h2{
+color:#AAC8A7;
+}
+
+main {  
+    padding: 15px;  
+}  
+
+footer {  
+    text-align: center;  
+    padding: 10px;  
+    background: #333;  
+    color: #fff;  
+    position: fixed;  
+    bottom: 0;  
+    width: 100%;  
+}
+
+strong{
+    color: red;
+}
+
+button {  
+    padding: 10px;  
+    background: #89CFF3; /* Màu xanh lá cây */  
+    color: #fff;  
+    border: none;  
+    border-radius: 4px;  
+    cursor: pointer;  
+    transition: background 0.3s;  
+}  
+
+button:hover {  
+    background: #00A9FF; /* Màu nền khi di chuột qua */  
+}  

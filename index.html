@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh Sách Phim</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <footer
+      style="
+        padding: 10px;
+        background-color: black;
+        display: flex;
+        gap: 20px;
+        height: 40px;
+        align-items: center;
+        top: 0;
+        position: fixed;
+        width: 100%;
+      "
+    >
+      <div id="user-info"></div>
+      <button id="contact-button">Liên Hệ</button>
+      <button id="history-button">Lịch sử đặt vé</button>
+      <button id="logout-button">Đăng xuất</button>
+    </footer>
+
+    <header>
+      <h1>Phim hay.net🔥</h1>
+      <p>Nơi Lựa Chọn Phim Hay Của Bạn</p>
+      <input type="text" id="search" placeholder="Tìm kiếm phim..." />
+    </header>
+
+    <main id="movie-list"></main>
+
+    <script src="./js/trangchu/load_api.js"></script>
+    <script src="./js/trangchu/main.js"></script>
+    <script type="module" src="./js/firebase.js"></script>
+
+    <script>
+      document
+        .getElementById("contact-button")
+        .addEventListener("click", function () {
+          // Chuyển hướng về trang index
+          window.location.href = "./html/contact.html";
+        });
+
+      document
+        .getElementById("history-button")
+        .addEventListener("click", function () {
+          // Chuyển hướng về trang index
+          window.location.href = "./html/history.html";
+        });
+    </script>
+  </body>
+</html>

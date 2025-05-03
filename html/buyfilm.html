@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lấy mã code + Đặt Vé Xem Phim</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      .section {
+        margin-top: 20px;
+      }
+      .section h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #555;
+      }
+      .options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .option {
+        padding: 10px 15px;
+        background: #eee;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .option:hover {
+        background: #ccc;
+      }
+      .option.active {
+        background: #007bff;
+        color: white;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 12px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        margin-top: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #218838;
+      }
+
+      .result {
+        margin-top: 20px;
+        padding: 15px;
+        background: #e9ecef;
+        border-radius: 6px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Đặt Vé Phim🎫</h2>
+
+      <div class="section">
+        <h3>Chọn phim:</h3>
+        <div class="options" id="movieOptions">
+          <div class="option" data-name="A Working Man">A Working Man</div>
+          <div class="option" data-name="Havoc">Havoc</div>
+          <div class="option" data-name="A Minecraft Movie">
+            A Minecraft Movie
+          </div>
+          <div class="option" data-name="In the Lost Lands">
+            In the Lost Lands
+          </div>
+          <div class="option" data-name="新幹線大爆破">新幹線大爆破</div>
+          <div class="option" data-name="Wonder Woman">Wonder Woman</div>
+          <div class="option" data-name="Captain America: Brave New World">
+            Captain America: Brave New World
+          </div>
+          <div class="option" data-name="Desert Dawn">Desert Dawn</div>
+          <div class="option" data-name="Sinners">Sinners</div>
+          <div class="option" data-name="Van Gogh by Vincent">
+            Van Gogh by Vincent
+          </div>
+          <div class="option" data-name="Death of a Unicorn">Death of a Unicorn</div>
+          <div class="option" data-name="Thunderbolts*">Thunderbolts*</div>
+          <div class="option" data-name="Blade Runner 2049">
+            Blade Runner 2049
+          </div>
+          <div class="option" data-name="ज्वेल थीफ: द हीस्ट बिगिन्स">
+            ज्वेल थीफ: द हीस्ट बिगिन्स
+          </div>
+          <div class="option" data-name="The Monkey">The Monkey</div>
+          <div class="option" data-name="Exterritorial">Exterritorial</div>
+          <div class="option" data-name="Saint Catherine">
+            Saint Catherine
+          </div>
+         
+          <div class="option" data-name="Dunkirk">Dunkirk</div>
+          <div class="option" data-name="Day of Reckoning">
+            Day of Reckoning
+          </div>
+          <div class="option" data-name="Alien">Alien</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Thời gian phát sóng của phim🎬</h3>
+        <h3>Lưu ý chọn đúng tên phim mà bạn đã chọn ở trên⚠️</h3>
+        <div class="options" id="timeOptions">
+          <div class="option" data-time="Havoc (14:15PM-16:00PM) | Phòng 145">
+            Havoc (14:15PM-16:00PM) | Phòng 145
+          </div>
+          <div
+            class="option"
+            data-time="A Working Man (14:00PM-15:45PM) | Phòng 148"
+          >
+            A Working Man (14:00PM-15:45PM) | Phòng 148
+          </div>
+          <div
+            class="option"
+            data-time="A Minecraft Movie (19:30PM-21:15PM) | Phòng 178"
+          >
+            A Minecraft Movie (19:30PM-21:15PM) | Phòng 178
+          </div>
+          <div
+            class="option"
+            data-time="Van Gogh by Vincent (10:15AM-12:00AM) | Phòng 115"
+          >
+            Van Gogh by Vincent (10:15AM-12:00AM) | Phòng 115
+          </div>
+          <div
+            class="option"
+            data-time="新幹線大爆破 (16:45PM-18:30PM) | Phòng 155"
+          >
+            新幹線大爆破 (16:45PM-18:30PM) | Phòng 155
+          </div>
+          <div
+            class="option"
+            data-time="In the Lost Lands (11:30AM-13:15PM) | Phòng 122"
+          >
+            In the Lost Lands (11:30AM-13:15PM) | Phòng 122
+          </div>
+          <div
+            class="option"
+            data-time="ज्वेल थीफ: द हीस्ट बिगिन्स (15:00PM-16:45PM) | Phòng 152"
+          >
+            ज्वेल थीफ: द हीस्ट बिगिन्स (15:00PM-16:45PM) | Phòng 152
+          </div>
+          <div
+            class="option"
+            data-time="Wonder Woman (20:15PM-22:00PM) | Phòng 189"
+          >
+          Wonder Woman (20:15PM-22:00PM) | Phòng 189
+          </div>
+          <div
+            class="option"
+            data-time="Desert Dawn (09:00AM-10:45AM) | Phòng 102"
+          >
+            Desert Dawn (09:00AM-10:45AM) | Phòng 102
+          </div>
+          <div
+            class="option"
+            data-time="Captain America: Brave New World (12:30AM-14:15PM) | Phòng 132"
+          >
+            Captain America: Brave New World (12:30AM-14:15PM) | Phòng 132
+          </div>
+          <div class="option" data-time="Sinners (17:30PM-19:15PM) | Phòng 166">
+            Sinners (17:30PM-19:15PM) | Phòng 166
+          </div>
+          <div
+            class="option"
+            data-time="The Monkey (21:00PM-22:45PM) | Phòng 195"
+          >
+            The Monkey (21:00PM-22:45PM) | Phòng 195
+          </div>
+          <div
+            class="option"
+            data-time="Death of a Unicorn (13:45PM-15:30PM) | Phòng 142"
+          >
+            Death of a Unicorn (13:45PM-15:30PM) | Phòng 142
+          </div>
+          <div
+            class="option"
+            data-time="Exterritorial (18:00PM-19:45PM) | Phòng 170"
+          >
+            Exterritorial (18:00PM-19:45PM) | Phòng 170
+          </div>
+          <div class="option" data-time="Saint Catherine (18:45PM-20:30PM) | Phòng 173">
+            Saint Catherine (18:45PM-20:30PM) | Phòng 173
+          </div>
+          <div
+            class="option"
+            data-time="Thunderbolts* (16:00PM-17:45PM) | Phòng 162"
+          >
+            Thunderbolts* (16:00PM-17:45PM) | Phòng 162
+          </div>
+          <div class="option" data-time="Alien (14:30PM-16:15PM) | Phòng 146">
+            Alien (14:30PM-16:15PM) | Phòng 146
+          </div>
+          <div class="option" data-time="Dunkirk (20:30PM-22:15PM) | Phòng 192">
+            Dunkirk (20:30PM-22:15PM) | Phòng 192
+          </div>
+          <div
+            class="option"
+            data-time="Blade Runner 2049 (11:15AM-13:00PM) | Phòng 125"
+          >
+            Blade Runner 2049 (11:15AM-13:00PM) | Phòng 125
+          </div>
+          <div
+            class="option"
+            data-time="Day of Reckoning (17:00PM-18:45PM) | Phòng 165"
+          >
+            Day of Reckoning (17:00PM-18:45PM) | Phòng 165
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Nhập mã phim:</h3>
+        <input type="text" id="cardCode" placeholder="Nhập mã phim🎬..." />
+      </div>
+
+      <button id="submitButton">Đặt Vé</button>
+      <div class="result" id="result"></div>
+      <button id="back-button">Trở Về</button>
+
+    </div>
+
+    <script type="module" src="../js/thanhtoan/buyFilm.js"></script>
+  </body>
+</html>
