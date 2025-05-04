@@ -69,7 +69,7 @@ async function submitPayment() {
   }
 
   result.innerHTML = `
-    Thanh toán thành công! <br>
+   Đặt vé thành công! <br>
     Phim: <strong>${selectedMovie}</strong> <br>
     Giờ chiếu phim: <strong>${selectedTime}</strong> <br>
     Mã phim: <strong>${cardCode}</strong> <br>
